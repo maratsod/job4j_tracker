@@ -10,4 +10,5 @@ public class BallStory {
         volk.tryEat(ball);
         lis.tryEat(ball);
     }
+
 }
