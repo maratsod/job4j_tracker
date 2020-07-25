@@ -9,6 +9,6 @@ public class College {
         student.setGroup("12345");
         student.setEntered("01.09.2020");
 
-        System.out.println(student.getSurname() + " " + student.getName() + " " + student.getPatronymic() + ", group number is " + student.getGroup() + ", the date of entrance is " + student.getEntered());
+        System.out.println(student + ", group number is " + student.getGroup() + ", the date of entrance is " + student.getEntered());
     }
 }

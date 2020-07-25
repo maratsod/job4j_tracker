@@ -7,24 +7,12 @@ public class Student {
     private String group;
     private String entered;
 
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public String getPatronymic() {
-        return patronymic;
     }
 
     public void setPatronymic(String patronymic) {
@@ -45,6 +33,11 @@ public class Student {
 
     public void setEntered(String entered) {
         this.entered = entered;
+    }
+
+    public String toString() {
+
+        return name + " " + surname + " " + patronymic;
     }
 
 }
