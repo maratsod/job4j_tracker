@@ -10,28 +10,13 @@ public class Matches {
             int select = Integer.valueOf(input.nextLine());
             if (select == 3) {
                 matches -= select;
-                if (matches < 0){
-                    System.out.println("На столе не осталось спичек");
-                }
-                 else {
-                    System.out.println("На столе осталось спичек: " + matches);
-                }
+                System.out.println("На столе осталось спичек: " + matches);
             } else if (select == 2) {
                 matches -= select;
-                if (matches < 0){
-                    System.out.println("На столе не осталось спичек");
-                }
-                else {
-                    System.out.println("На столе осталось спичек: " + matches);
-                }
+                System.out.println("На столе осталось спичек: " + matches);
             } else if (select == 1) {
                 matches -= select;
-                if (matches < 0){
-                    System.out.println("На столе не осталось спичек");
-                }
-                else {
-                    System.out.println("На столе осталось спичек: " + matches);
-                }
+                System.out.println("На столе осталось спичек: " + matches);
             } else {
                 System.out.println("Возьмите спички от 1 до 3");
             }
