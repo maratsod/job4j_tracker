@@ -5,14 +5,14 @@ public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int matches = 11;
-        int turn = 2;
+        boolean player = false;
         while (0 < matches) {
-            if (turn % 2 ==0) {
+            if (player == false) {
                 System.out.println("Ходит 1 игрок");
-                turn++;
-            } else {
+                player = !player;
+            } else if (player == true) {
                 System.out.println("Ходит 2 игрок");
-                turn++;
+                player = !player;
             }
 
             System.out.println("Возьмите спички от 1 до 3");
@@ -26,5 +26,11 @@ public class Matches {
             System.out.println();
         }
         System.out.println("Game over");
+        if (player == true) {
+            System.out.println("Победил игрок 1");
+        }
+        else if (player == false) {
+            System.out.println("Победил игрок 2");
+        }
         }
     }
