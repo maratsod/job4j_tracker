@@ -7,14 +7,8 @@ public class Matches {
         int matches = 11;
         boolean player = false;
         while (0 < matches) {
-            if (player == false) {
-                System.out.println("Ходит 1 игрок");
-                player = !player;
-            } else if (player == true) {
-                System.out.println("Ходит 2 игрок");
-                player = !player;
-            }
-
+            player = !player;
+            System.out.println(String.format("Ходит %s игрок", player ? "1": "2"));
             System.out.println("Возьмите спички от 1 до 3");
             int select = Integer.valueOf(input.nextLine());
             if (0 < select && select < 4) {
@@ -26,11 +20,6 @@ public class Matches {
             System.out.println();
         }
         System.out.println("Game over");
-        if (player == true) {
-            System.out.println("Победил игрок 1");
-        }
-        else if (player == false) {
-            System.out.println("Победил игрок 2");
-        }
+        System.out.println(String.format("Победил игрок %s", player ? "1": "2"));
         }
     }
