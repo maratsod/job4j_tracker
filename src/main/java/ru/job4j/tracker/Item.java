@@ -6,6 +6,10 @@ public class Item {
 
     public Item(int id, String name) {
     }
+    public Item( String name) {
+    }
+    public Item( int id) {
+    }
 
     public int getId() {
         return id;

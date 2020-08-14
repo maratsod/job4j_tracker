@@ -16,7 +16,7 @@ public class StartUI {
             System.out.println(items[i]);
         }
     }
-    public static void editItem(Input input, Tracker tracker) {
+    public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ====");
         int id = input.askInt("=== Enter item's id ====");
         String name = input.askStr("=== Change name ====");
@@ -71,7 +71,7 @@ public class StartUI {
                 StartUI.showItems(items);
 
             } else if (select == 2) {
-                StartUI.editItem(input, tracker);
+                StartUI.replaceItem(input, tracker);
 
             } else if (select == 3) {
                 StartUI.deleteItem(input, items, tracker);
