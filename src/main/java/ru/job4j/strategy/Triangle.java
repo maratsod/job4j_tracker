@@ -13,3 +13,4 @@ public class Triangle implements Shape {
         System.out.println(new Triangle().draw());
     }
 }
+
