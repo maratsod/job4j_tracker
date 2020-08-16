@@ -30,7 +30,7 @@ public class StartUITest {
         Item item = tracker.add(new Item("Replaced item"));
         item.getId();
         String replacedName = "New item name";
-        Input in = new StubInput(new String[] {"0", "Item name", "1"});
+        Input in = new StubInput(new String[] {"0","Item id", "Item name", "1"});
         UserAction[] actions = {new ReplaceAction(), new Exit()};
         new StartUI().init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(replacedName));
