@@ -12,7 +12,9 @@ public class StartUI {
     }
     public static void showItems(Tracker tracker) {
         System.out.println("=== Show all items ====");
-        tracker.findAll();
+        for (int i = 0; i < tracker.findAll().length; i++) {
+            System.out.println(tracker.findAll()[i]);
+        }
     }
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ====");
