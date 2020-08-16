@@ -10,11 +10,9 @@ public class StartUI {
         tracker.add(item);
         System.out.println("=== A new item was created ====");
     }
-    public static void showItems(Item[] items) {
+    public static void showItems(Tracker tracker) {
         System.out.println("=== Show all items ====");
-        for (int i = 0; i < items.length; i++) {
-            System.out.println(items[i]);
-        }
+        tracker.findAll();
     }
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ====");
@@ -27,10 +25,10 @@ public class StartUI {
             System.out.println("=== Item was not replaced, try again ====");
         }
     }
-    public static void deleteItem(Input input, Item[] items, Tracker tracker) {
+    public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ====");
         int id = input.askInt("=== Enter item's id ====");
-        if (tracker.delete(items, id)) {
+        if (tracker.delete(id)) {
             System.out.println("=== Item was deleted ====");
         } else {
             System.out.println("=== Item was not deleted, try again ====");
@@ -58,6 +56,8 @@ public class StartUI {
             System.out.println("=== Try again ====");
         }
     }
+    public static void Exit(Input input, Tracker tracker) {
+    }
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
         while (run) {
@@ -77,7 +77,9 @@ public class StartUI {
         Item[] items = new Item[100];
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
-        UserAction[] actions = {new CreateAction()};
+        UserAction[] actions = {new CreateAction(), new ShowAction(),
+                new ReplaceAction(), new DeleteAction(),
+                new IdAction(), new NameAction(), new ExitAction()};
         new StartUI().init(input, tracker, actions);
     }
 }
