@@ -5,21 +5,20 @@ public class FindEl {
         int rsl = -1;
         for (int i = 0; i < value.length; i++) {
             if ( value[i] == key ) {
-                System.out.println( key + " is found at index " + rsl);
+                System.out.println(key + " is found at index " + i);
             }
             rsl++;
     }
         if (rsl == -1) {
-            throw new ElementNotFoundException("key is not found");
+            throw new ElementNotFoundException("item is not found");
         }
         return rsl;
     }
 
-
     public static void main(String[] args) {
         try {
             String[] colours = { "Red", "Orange", "Yellow", "Green" };
-            indexOf(colours , "b");
+            indexOf(colours , "v");
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
