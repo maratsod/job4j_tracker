@@ -14,6 +14,7 @@ public class UserStore {
         return null;
     }
 
+
     public static boolean validate(User user) throws UserInvalidException {
         String username = user.getUsername();
         if (username.length()<3) {
