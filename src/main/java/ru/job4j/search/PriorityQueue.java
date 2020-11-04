@@ -1,13 +1,5 @@
 package ru.job4j.search;
-/**
- * Метод должен вставлять в нужную позицию элемент.
- * Позиция определяется по полю приоритет.
- * Для вставки использовать add(int index, E value)
- * @param task задача
- */
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedList;
 
 public class PriorityQueue {
