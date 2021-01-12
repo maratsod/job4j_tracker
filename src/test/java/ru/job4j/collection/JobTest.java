@@ -18,22 +18,22 @@ public class JobTest {
     }
 
     @Test
-    public void whenCompatorByPriorityAndName() {
-        Comparator<Job> cmpNamePriority = new JobIncreaseByName().thenComparing(new JobDescByName());
+    public void whenCompatorByNameAndPrority1() {
+        Comparator<Job> cmpNamePriority = new JobIncreaseByName().thenComparing(new JobDescByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Impl task", 0),
-                new Job("Fix bug", 3)
+                new Job("Stone tone", 4),
+                new Job("Stone tone", 3)
         );
-        assertThat(rsl, greaterThan(0));
+        assertThat(rsl, lessThan(0));
     }
 
     @Test
     public void whenCompatorByNameAndPrority2() {
-        Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobIncreaseByName());
+        Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobIncreaseByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Rock pork", 0),
-                new Job("Mix bug", 4)
+                new Job("Rock pork", 2),
+                new Job("Stone tone", 4)
         );
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 }
