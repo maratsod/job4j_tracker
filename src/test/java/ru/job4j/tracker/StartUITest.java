@@ -90,7 +90,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Show all items"));
         item.getId();
-        Input in = new StubInput(new String[] {"0", String.valueOf(item.getId()), "1"});
+        Input in = new StubInput(new String[] {"0", "1"});
         UserAction[] actions = {new ShowAction(out), new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
         String line = System.lineSeparator();
@@ -117,6 +117,27 @@ public class StartUITest {
                 + System.lineSeparator() + "0. Exit" + System.lineSeparator()));
     }
 
-
+    @Test
+    public void whenInvalidExit() {
+        String line = System.lineSeparator();
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] { "4", "0" }
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = {
+                new ExitAction(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(out.toString(), is(
+                String.format(
+                        "Menu.%n"
+                                + "0. Exit%n"
+                                + "Wrong input, you can select: 0 .. 0%n"
+                                + "Menu.%n"
+                                + "0. Exit%n"
+                )
+        ));
+    }
 }
 
