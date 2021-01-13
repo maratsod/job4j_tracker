@@ -21,7 +21,7 @@ public class NameAction implements UserAction  {
             for (int index = 0; index < items.length; index++) {
                out.println("=== Item " + items[index] + " was found by name ====");
             }
-        }else {
+        } else {
             out.println("=== Try again ====");
         }
         return true;

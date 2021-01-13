@@ -18,7 +18,7 @@ public class JobDescByPriorityTest {
     public void whenTestCompare2() {
         int rsl = new Item(32, "Petr")
                 .compareTo(
-                        new Item(31,"Ivan")
+                        new Item(31, "Ivan")
                 );
         assertThat(rsl, greaterThan(0));
     }

@@ -17,7 +17,7 @@ public class SortByNameTest {
             public void whenSortByName() {
                 int rsl = new Item(32, "Petr")
                         .compareTo(
-                                new Item(31,"Ivan")
+                                new Item(31, "Ivan")
                         );
                 assertThat(rsl, greaterThan(0));
             }

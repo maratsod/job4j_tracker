@@ -18,7 +18,7 @@ public class JobIncreaseByNameTest {
     public void whenTestCompare1() {
         int rsl = new Item(32, "Petr")
                 .compareTo(
-                        new Item(31,"Ivan")
+                        new Item(31, "Ivan")
                 );
         assertThat(rsl, greaterThan(0));
     }

@@ -20,9 +20,11 @@ public class Item implements Comparable<Item> {
     public String getName() {
         return name;
     }
+
     public int getId() {
         return id;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -33,10 +35,10 @@ public class Item implements Comparable<Item> {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                '}';
+        return "Item{"
+                + "name='" + name + '\''
+                + ", id=" + id
+                + '}';
     }
 
     @Override

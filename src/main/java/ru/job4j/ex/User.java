@@ -8,6 +8,7 @@ public class User {
         this.username = username;
         this.valid = valid;
     }
+
     public String getUsername() {
         return username;
     }

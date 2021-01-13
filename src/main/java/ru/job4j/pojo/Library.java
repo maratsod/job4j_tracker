@@ -17,7 +17,7 @@ public class Library {
         }
 
         System.out.println("Replace German detective to Clean code.");
-        Book temp= books[0];
+        Book temp = books[0];
         books[0] = books[3];
         books[3] = temp;
 

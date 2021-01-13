@@ -6,7 +6,8 @@ public class DummyDic {
         String item = word.engToRus("Knowledge");
         System.out.println(item);
     }
-    String engToRus(String eng){
+
+    String engToRus(String eng) {
         return "Неизвестное слово. " + eng;
     }
 }

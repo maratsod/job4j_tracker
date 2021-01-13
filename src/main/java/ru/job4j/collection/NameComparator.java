@@ -4,7 +4,7 @@ import ru.job4j.tracker.Item;
 
 import java.util.Comparator;
 
-public class NameComparator implements Comparator<User>{
+public class NameComparator implements Comparator<User> {
     @Override
     public int compare(User first, User second) {
         return first.getName().compareTo(second.getName());
