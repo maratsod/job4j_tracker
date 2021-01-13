@@ -23,7 +23,8 @@ public class StartUITest {
         Item item = tracker.add(new Item("Replaced item"));
         item.getId();
         String replacedName = "New item name";
-        Input in = new StubInput(new String[] {"0",String.valueOf(item.getId()), replacedName, "1"});
+        Input in = new StubInput(new String[]
+                {"0", String.valueOf(item.getId()), replacedName, "1"});
         UserAction[] actions = {new ReplaceAction(), new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
@@ -40,6 +41,7 @@ public class StartUITest {
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
+
     @Test
     public void whenFindById() {
         Output out = new StubOutput();
@@ -49,8 +51,18 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", String.valueOf(item.getId()), "1"});
         UserAction[] actions = {new IdAction(out), new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()), is(item));
+        String line = System.lineSeparator();
+        String expected = "Menu." + line
+                + "0. === Find item by Id ====" + line
+                + "1. Exit" + line
+                + "=== Item  + item.toString() +  was found by id ====" + line
+                + "Menu." + line
+                + "0. === Find item by Id ====" + line
+                + "1. Exit" + line;
+        assertThat(out.toString(), is(expected));
     }
+
+
     @Test
     public void whenFindByName() {
         Output out = new StubOutput();
@@ -60,8 +72,18 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", String.valueOf(item.getId()), "1"});
         UserAction[] actions = {new NameAction(out), new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()).getName(), is(name));
+        String line = System.lineSeparator();
+        String expected = "Menu." + line
+                + "0. === Find items by name ====" + line
+                + "1. Exit" + line
+                + "=== Try again ====" + line
+                + "Menu." + line
+                + "0. === Find items by name ====" + line
+                + "1. Exit" + line;
+        assertThat(out.toString(), is(expected));
     }
+
+
     @Test
     public void whenShowAll() {
         Output out = new StubOutput();
@@ -71,8 +93,19 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", String.valueOf(item.getId()), "1"});
         UserAction[] actions = {new ShowAction(out), new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findAll(), is(item));
+        String line = System.lineSeparator();
+        String expected = "Menu." + line
+                + "0. === Show all items ====" + line
+                + "1. Exit" + line
+                + "=== Print all items ====" + line
+                + item.toString() + line
+                + "Menu." + line
+                + "0. === Show all items ====" + line
+                + "1. Exit" + line;
+        assertThat(out.toString(), is(expected));
+
     }
+
     @Test
     public void whenExit() {
         Output out = new StubOutput();
@@ -80,8 +113,10 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions =  {new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu." + System.lineSeparator() + "0. Exit" + System.lineSeparator()));
+        assertThat(out.toString(), is("Menu."
+                + System.lineSeparator() + "0. Exit" + System.lineSeparator()));
     }
+
 
 }
 
