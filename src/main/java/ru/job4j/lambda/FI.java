@@ -14,7 +14,7 @@ public class FI {
         List<String> list = Arrays.asList("January", "February", "March", "April", "May");
         System.out.println(list + " ");
         Collections.sort(list, comparator);
-        for(String str : list) {
+        for (String str : list) {
             System.out.print(str + " ");
         }
     }
