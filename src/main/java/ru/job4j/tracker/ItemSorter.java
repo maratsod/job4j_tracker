@@ -4,12 +4,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import java.util.Comparator;
+
 public class ItemSorter {
     public static void main(String[] args) {
         List<Item> it = Arrays.asList(
-                new Item(4,"Fix bugs"),
-                new Item(2,"Impl task"),
-                new Item(1,"Reboot server")
+                new Item(4, "Fix bugs"),
+                new Item(2, "Impl task"),
+                new Item(1, "Reboot server")
         );
         System.out.println(it);
         Collections.sort(it, new SortByName());
@@ -22,4 +24,5 @@ public class ItemSorter {
         System.out.println(it);
     }
 }
+
 
