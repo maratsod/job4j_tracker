@@ -21,7 +21,7 @@ public class NameAction implements UserAction  {
         List<Item> items = tracker.findByName(name);
         if (items.size() > 0) {
             for (Item item : items) {
-               out.println("=== Item  "+  item + "  was found by name ====");
+               out.println("=== Item  " +  item + "  was found by name ====");
             }
         } else {
             out.println("=== Try again ====");
