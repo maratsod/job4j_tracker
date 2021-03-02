@@ -22,5 +22,3 @@ notifications:
       - sodnopov@list.ru
     on_success: never # default: change
     on_failure: always # default: always
-
-    7544d2cc-6d68-4a03-a02c-7fee3b16c3fd
