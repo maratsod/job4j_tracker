@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Arrays;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 public class StartUITest {
     @Test
@@ -40,7 +40,7 @@ public class StartUITest {
         Input in = new StubInput(new String[] {"0", String.valueOf(item.getId()), "1"});
         UserAction[] actions = {new DeleteAction(), new ExitAction(out)};
         new StartUI(out).init(in, tracker, Arrays.asList(actions));
-        assertThat(tracker.findById(item.getId()), is(nullValue()));
+        assertNull(tracker.findById(item.getId()));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class StartUITest {
         String expected = "Menu." + line
                 + "0. === Find item by Id ====" + line
                 + "1. Exit" + line
-                + "=== Item  + item.toString() +  was found by id ====" + line
+                + "=== Item was found by id ====" + line
                 + "Menu." + line
                 + "0. === Find item by Id ====" + line
                 + "1. Exit" + line;
@@ -139,4 +139,7 @@ public class StartUITest {
         ));
     }
 }
+
+
+
 
