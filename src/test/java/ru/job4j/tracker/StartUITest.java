@@ -137,8 +137,9 @@ public class StartUITest {
                                 + "0. Exit%n"
                 )
         ));
-    }
+   }
 }
+
 
 
 
