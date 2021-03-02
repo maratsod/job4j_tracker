@@ -32,6 +32,7 @@ public class ProfilesTest {
                 is(addresses)
         );
     }
+
     @Test
     public void whenGetAddressesWithoutDuplicates() {
         List<Address> addresses = Arrays.asList(
