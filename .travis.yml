@@ -17,8 +17,8 @@ env:
 
 # Отправлять уведомление на почтуyouremail@smtp.ru(Изменить на свою) если сборка упала
 notifications:
-  email:
-    recipients:
-      - sodnopov@list.ru
+ email:
+  recipients:
+    - sodnopov@list.ru
     on_success: never # default: change
     on_failure: always # default: always

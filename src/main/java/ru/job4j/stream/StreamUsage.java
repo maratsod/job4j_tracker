@@ -8,9 +8,9 @@ public class StreamUsage {
         List<Integer> list = List.of(
                 -1, 2, -3, 4, -5, 6, -7, 8, -9, 10
         );
-        list = list.stream().filter(
-                (i) -> i > 0
-        ).collect(Collectors.toList());
-        list.forEach(System.out::println);
+        list.stream()
+                .filter((i) -> i > 0)
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
     }
 }
