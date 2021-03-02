@@ -10,7 +10,7 @@ public class SearchAtt {
     public static List<Attachment> filterSize(List<Attachment> list, int value) {
         Predicate<Attachment> predicate = new Predicate<>() {
             @Override
-            public boolean test(Attachment att){
+            public boolean test(Attachment att) {
                 return att.getSize() > value;
             }
         };
@@ -20,7 +20,7 @@ public class SearchAtt {
     public static List<Attachment> filterName(List<Attachment> list, String value) {
         Predicate<Attachment> predicate = new Predicate<>() {
             @Override
-            public boolean test(Attachment att){
+            public boolean test(Attachment att) {
                 return att.getName().contains(value);
             }
         };
@@ -44,7 +44,7 @@ public class SearchAtt {
                 new Attachment("image3", 1193)
         );
         List<Attachment> compare = filterSize(attachments, 100);
-            for(Attachment newAtt : compare) {
+            for (Attachment newAtt : compare) {
                 System.out.println(newAtt);
             }
         }
