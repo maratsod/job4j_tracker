@@ -14,7 +14,7 @@ public class MatrixToList {
         matrixToList(matrix);
     }
 
-    public static List<Integer> matrixToList(Integer [][] matrix) {
+    public static List<Integer> matrixToList(Integer[][] matrix) {
         return Stream.of(matrix)
                 .flatMap(Stream::of)
                 .collect(Collectors.toList());
