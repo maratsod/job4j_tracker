@@ -10,6 +10,7 @@ public class Profiles {
                 .map(Profile :: getAddress)
                 .collect(Collectors.toList());
     }
+
     public static List<Address> collectUnique(List<Profile> profiles) {
         return profiles.stream()
                 .map(Profile :: getAddress)
