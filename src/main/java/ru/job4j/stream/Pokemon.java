@@ -34,7 +34,6 @@ public class Pokemon {
             return this;
         }
 
-
         Pokemon.Builder buildHeight(double height) {
             this.height = height;
             return this;
@@ -44,6 +43,7 @@ public class Pokemon {
             this.weight = weight;
             return this;
         }
+
         Pokemon.Builder buildType(String type) {
             this.type = type;
             return this;
@@ -66,6 +66,7 @@ public class Pokemon {
             return pokemon;
     }
 }
+
     @Override
     public String toString() {
         return "Pokemon:"
