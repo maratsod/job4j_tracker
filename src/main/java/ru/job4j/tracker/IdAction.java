@@ -22,5 +22,4 @@ public class IdAction implements UserAction  {
             out.println("=== Try again ====");
         }
         return true;
-    }
-}
+    } }
