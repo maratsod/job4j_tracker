@@ -43,6 +43,24 @@ public class StartUITest {
         assertNull(tracker.findById(item.getId()));
     }
 
+    @Test
+    public void whenFindById() {
+        Output out = new StubOutput();
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("Find By Id"));
+        Input in = new StubInput(new String[] {"0", String.valueOf(item.getId()), "1"});
+        UserAction[] actions = {new IdAction(out), new ExitAction(out)};
+        new StartUI(out).init(in, tracker, Arrays.asList(actions));
+        String line = System.lineSeparator();
+        String expected = "Menu." + line
+                + "0. === Find item by Id ====" + line
+                + "1. Exit" + line
+                + item + line
+                + "Menu." + line
+                + "0. === Find item by Id ====" + line
+                + "1. Exit" + line;
+        assertThat(out.toString(), is(expected));
+    }
 
     @Test
     public void whenFindByName() {
