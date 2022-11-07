@@ -9,13 +9,14 @@ public class Error {
         Error error = new Error(true, 404, "Error");
         error.printInfo();
     }
-    public Error(boolean active, int status, String message){
+
+    public Error(boolean active, int status, String message) {
         this.active = active;
         this.status = status;
         this.message = message;
     }
 
-    public Error(){
+    public Error() {
     }
 
     public void printInfo() {

@@ -19,7 +19,7 @@ public class Calculator {
         return a / x;
     }
 
-    public int sumAllOperation(int a){
+    public int sumAllOperation(int a) {
         return sum(a) + multiply(a)
                 + minus(a) + divide(a);
     }

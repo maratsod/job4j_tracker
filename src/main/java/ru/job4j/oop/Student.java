@@ -6,6 +6,7 @@ public class Student {
         String song = "I believe, I can fly";
         petya.song(song);
     }
+
     public void music() {
         System.out.println("Tra tra tra");
     }
