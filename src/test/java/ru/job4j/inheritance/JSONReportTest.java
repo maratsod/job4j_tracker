@@ -3,7 +3,7 @@ package ru.job4j.inheritance;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JSONReportTest {
+public class JSONReportTest  {
 
     @Test
     public void whenTestGenerateMethod() {
