@@ -13,6 +13,20 @@ public class Tracker {
         return item;
     }
 
+    public boolean delete(int id) {
+        boolean rsl = false;
+        int index = indexOf(id);
+        if (index != -1) {
+            int start = index + 1;
+            int length = this.size - index;
+            System.arraycopy(items, start, items, index, length);
+            items[this.size  - 1] = null;
+            this.size --;
+            rsl = true;
+        }
+        return rsl;
+    }
+
     public boolean replace(int id, Item item) {
         boolean rsl = false;
         int index = indexOf(id);
