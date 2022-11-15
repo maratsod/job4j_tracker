@@ -9,7 +9,6 @@ public class Book {
         this.pages = pages;
     }
 
-
     public String getTitle() {
         return title;
     }
@@ -28,7 +27,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "title '" + title + '\'' +
-                ", pages " + pages;
+        return "title '" + title + '\''
+                + ", pages " + pages;
     }
 }

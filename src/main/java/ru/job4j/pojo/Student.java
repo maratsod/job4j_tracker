@@ -5,7 +5,6 @@ public class Student {
     private int group;
     private String date;
 
-
     public String getName() {
         return name;
     }
@@ -32,9 +31,9 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student's " +
-                "name is '" + name + '\'' +
-                ", group number is " + group +
-                ", date entered: '" + date;
+        return "Student's "
+                + "name is '"
+                + name + '\'' + ", group number is "
+                + group + ", date entered: '" + date;
     }
 }

@@ -1,10 +1,10 @@
 package ru.job4j.poly;
 
 public interface Transport {
-    void move ();
+    void move();
 
-    void passengers (int passes);
+    void passengers(int passes);
 
-    int gasoline (int gas);
+    int gasoline(int gas);
 }
 

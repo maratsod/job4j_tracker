@@ -21,7 +21,7 @@ public class Tracker {
             int length = this.size - index;
             System.arraycopy(items, start, items, index, length);
             items[this.size  - 1] = null;
-            this.size --;
+            this.size--;
         }
         return rsl;
     }
