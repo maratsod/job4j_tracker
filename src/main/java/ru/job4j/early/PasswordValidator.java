@@ -22,7 +22,8 @@ public class PasswordValidator {
         }
         if (checkSubstring(password)) {
             throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
-        }  return password;
+        }
+        return password;
     }
 
     public static boolean checkSubstring(String password) {
