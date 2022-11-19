@@ -7,16 +7,21 @@ public class PasswordValidator {
         }
         if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
-        } if (password.equals(password.toUpperCase())) {
+        }
+        if (password.equals(password.toUpperCase())) {
             throw new IllegalArgumentException("Password should contain at least one lowercase letter");
-        } if (password.equals(password.toLowerCase())) {
+        }
+        if (password.equals(password.toLowerCase())) {
             throw new IllegalArgumentException("Password should contain at least one uppercase letter");
-        } if (!checkDigit(password)) {
-            throw new IllegalArgumentException ("Password should contain at least one figure");
-        } if (!checkSymbols(password)) {
-            throw new IllegalArgumentException ("Password should contain at least one special symbol");
-        } if (checkSubstring(password)) {
-            throw new IllegalArgumentException ("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
+        }
+        if (!checkDigit(password)) {
+            throw new IllegalArgumentException("Password should contain at least one figure");
+        }
+        if (!checkSymbols(password)) {
+            throw new IllegalArgumentException("Password should contain at least one special symbol");
+        }
+        if (checkSubstring(password)) {
+            throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
         }  return password;
     }
 
