@@ -1,7 +1,6 @@
 package ru.job4j.early;
 
 public class PasswordValidator {
-
     public static String validate(String password) {
         if (password == null) {
             throw new IllegalArgumentException("Password can't be null");
