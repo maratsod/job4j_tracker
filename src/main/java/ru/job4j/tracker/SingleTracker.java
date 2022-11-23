@@ -6,7 +6,8 @@ public class SingleTracker {
     private Tracker tracker = new Tracker();
     private static SingleTracker singleTracker = null;
 
-    private SingleTracker(){}
+    private SingleTracker() {
+    }
 
     private static SingleTracker getSingleTracker() {
         if (singleTracker == null) {
