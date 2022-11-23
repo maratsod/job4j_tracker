@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.offset;
 
 class AnalyzeByMapTest {
-
     @Test
     public void whenAverageScore() {
         double average = AnalyzeByMap.averageScore(
