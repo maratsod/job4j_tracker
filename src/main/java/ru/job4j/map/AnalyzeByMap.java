@@ -33,11 +33,8 @@ public class AnalyzeByMap {
         List<Label> rsl = new ArrayList<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                if (pupilsMap.containsKey(subject.name())) {
-                    pupilsMap.replace(subject.name(), pupilsMap.get(subject.name()) + subject.score());
-                } else {
-                    pupilsMap.put(subject.name(), subject.score());
-                }
+                int score = pupilsMap.getOrDefault(subject.name(), 0);
+                pupilsMap.put(subject.name(), score + subject.score());
             }
         }
 
