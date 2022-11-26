@@ -17,6 +17,36 @@ public class PhoneDictionaryTest {
     }
 
     @Test
+    public void whenFindBySurname() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+        );
+        ArrayList<Person> persons = phones.find("sen");
+        assertThat(persons.get(0).getName()).isEqualTo("Petr");
+    }
+
+    @Test
+    public void whenFindByPhone() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+        );
+        ArrayList<Person> persons = phones.find("4872");
+        assertThat(persons.get(0).getPhone()).isEqualTo("534872");
+    }
+
+    @Test
+    public void whenFindByAddress() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+        );
+        ArrayList<Person> persons = phones.find("yans");
+        assertThat(persons.get(0).getAddress()).isEqualTo("Bryansk");
+    }
+
+    @Test
     public void whenNull() {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(
