@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Label {
     private String name;
+
     private float price;
 
     public Label(String name, float price) {

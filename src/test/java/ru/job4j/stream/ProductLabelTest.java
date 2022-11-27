@@ -8,6 +8,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProductLabelTest {
+
     @Test
     public void whenGeneratedLabels() {
         Label one = new Label("bread", 10);

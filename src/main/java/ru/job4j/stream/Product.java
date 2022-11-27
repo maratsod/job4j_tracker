@@ -4,8 +4,11 @@ import java.util.Objects;
 
 public class Product {
     private String name;
+
     private float price;
+
     private int standard;
+
     private int actual;
 
     public Product(String name, float price, int standard, int actual) {
