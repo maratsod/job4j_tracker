@@ -22,7 +22,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "suit = " + suit +
-                ", value = " + value;
+        return "suit = " + suit
+                + ", value = " + value;
     }
 }
